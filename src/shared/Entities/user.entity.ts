@@ -12,38 +12,37 @@ export class UserEntity extends BaseEntity {
   id: number;
   @Column({
     length: 50,
-    type: 'string',
   })
   full_name: string;
   @Column({
-    type: 'string',
     unique: true,
     length: 80,
+    type: 'varchar',
   })
   email: string;
   @Column({
-    type: 'string',
     unique: true,
     length: 16,
+    type: 'varchar',
   })
   username: string;
   @Column({
-    type: 'string',
     length: 150,
+    type: 'varchar',
   })
   biography: string;
   @Column({
-    type: 'string',
     length: 90,
+    type: 'varchar',
   })
   link: string;
-  @Column('string')
+  @Column('varchar')
   password: string;
   @Column('boolean')
   is_active: boolean;
   @Column('boolean')
   is_banned: boolean;
-  @Column('tinyint')
+  @Column('smallint')
   role: number;
   @BeforeInsert()
   async hashPassword() {
