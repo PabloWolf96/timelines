@@ -5,4 +5,4 @@ import { UserEntity } from 'src/shared/Entities/user.entity';
 @Module({
   imports: [TypeOrmModule.forFeature([UserEntity])],
 })
-export class UsersModule {}
+export class UserModule {}
