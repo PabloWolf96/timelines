@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import * as dotenv from 'dotenv';
 dotenv.config();
-@Injectable()
 class ConfigService {
   get(key: string): string {
     return process.env[key];

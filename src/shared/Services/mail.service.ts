@@ -3,7 +3,8 @@ import * as ejs from 'ejs';
 import { configService } from './config.service';
 import { MailSenderBody } from '../Types/mail-sender-body';
 import { getTemplatesDir } from '../Helpers/get-templates-dir';
-
+import { Injectable } from '@nestjs/common';
+@Injectable()
 export class MailService {
   private transporter: nodemailer.Transporter;
 
